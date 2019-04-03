@@ -21,10 +21,10 @@
             android:layout_height="200dp" />
 
         <TextView
-            android:id="@+id/item_title"
+            android:id="@+id/c_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/catgeory"
+            android:text="@string/category"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="40sp" />

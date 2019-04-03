@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="16dp"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:id="@+id/event_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/e_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/event"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/event_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        
+        <ToggleButton
+            android:id="@+id/toggle"
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:textOn=""
+            android:textOff=""
+            android:background="@drawable/favourited_not"
+            android:onClick="onCustomToggleClick"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

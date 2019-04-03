@@ -6,12 +6,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity
+public class EventActivities extends AppCompatActivity
 {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
+    ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,8 +26,29 @@ public class MainActivity extends AppCompatActivity
         recyclerView = findViewById(R.id.recycler_view);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new CategoryRecyclerAdapter();
+        adapter = new EventRecyclerAdapter();
         recyclerView.setAdapter(adapter);
+    }
+
+    public void onCustomToggleClick(View view)
+    {
+        toggleButton = findViewById(R.id.toggle);
+
+        Toast.makeText(this, "Favourited", Toast.LENGTH_SHORT).show();
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(toggleButton.isChecked())
+                {
+                    toggleButton.setBackgroundDrawable(getDrawable(R.drawable.favourited_not));
+                }
+                else
+                {
+                    toggleButton.setBackgroundDrawable(getDrawable(R.drawable.favourited));
+                }
+            }
+        });
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.community_life;
 
-import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,33 +10,33 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import pl.droidsonroids.gif.GifImageView;
 
-public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecyclerAdapter.ViewHolder>
+public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdapter.ViewHolder>
 {
-    private String[] categories = {"Sports", "Music", "Arts & Crafts", "Computers", "Food",
-                               "Learning", "Outdoors"};
+    private String[] events = {"5-A-Side", "Indoor Football", "11v11", "RedLane Football", "Johnstown Football"};
 
     private int[] gifs = {R.drawable.sports, R.drawable.music, R.drawable.crafts,
-                            R.drawable.computers, R.drawable.food, R.drawable.learning,
-                            R.drawable.outdoors };
+            R.drawable.computers, R.drawable.food, R.drawable.learning,
+            R.drawable.outdoors };
 
     class ViewHolder extends RecyclerView.ViewHolder
     {
         LinearLayout linearLayout;
-        GifImageView categoryImageView;
-        private TextView categoryName;
+        GifImageView eventImageView;
+        private TextView eventName;
 
         private ViewHolder(View itemView)
         {
             super(itemView);
-            categoryImageView = itemView.findViewById(R.id.category_image);
-            categoryName = itemView.findViewById(R.id.c_item_title);
-            linearLayout = itemView.findViewById(R.id.category_layout) ;
+            eventImageView = itemView.findViewById(R.id.event_image);
+            eventName = itemView.findViewById(R.id.e_item_title);
+            linearLayout = itemView.findViewById(R.id.event_layout) ;
 
             itemView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v)
-                {
-                    Intent intent = new Intent(v.getContext(), EventActivities.class);
-                    v.getContext().startActivity(intent);
+                @Override public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Snackbar.make(v, "Click detected on item " + position,
+                            Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
             });
         }
@@ -46,7 +46,7 @@ public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecycl
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i)
     {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.category_layout, viewGroup, false);
+                .inflate(R.layout.event_layout, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }
@@ -54,8 +54,8 @@ public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecycl
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i)
     {
-        viewHolder.categoryName.setText(categories[i]);
-        viewHolder.categoryImageView.setImageResource(gifs[i]);
+        viewHolder.eventName.setText(events[i]);
+        viewHolder.eventImageView.setImageResource(gifs[i]);
 
         // Sports
         if(i == 0)
@@ -98,6 +98,7 @@ public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecycl
     @Override
     public int getItemCount()
     {
-        return categories.length;
+        return events.length;
     }
 }
+
