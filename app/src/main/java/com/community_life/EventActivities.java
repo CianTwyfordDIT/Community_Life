@@ -34,21 +34,14 @@ public class EventActivities extends AppCompatActivity
     {
         toggleButton = findViewById(R.id.toggle);
 
-        Toast.makeText(this, "Favourited", Toast.LENGTH_SHORT).show();
-        toggleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                if(toggleButton.isChecked())
-                {
-                    toggleButton.setBackgroundDrawable(getDrawable(R.drawable.favourited_not));
-                }
-                else
-                {
-                    toggleButton.setBackgroundDrawable(getDrawable(R.drawable.favourited));
-                }
-            }
-        });
+        if(((ToggleButton)view).isChecked())
+        {
+            Toast.makeText(this, "Added To Favourites", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Removed From Favourites", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
