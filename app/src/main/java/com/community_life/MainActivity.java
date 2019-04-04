@@ -1,11 +1,18 @@
+/* This table will be the attributes that
+   will be inserted into the database */
 package com.community_life;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+import com.community_life.adapters.CategoryRecyclerAdapter;
+import com.community_life.db_activities.DisplayActivity;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -18,6 +25,8 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Test to see if conected to database
+        Toast.makeText(this, "SUCCESS", Toast.LENGTH_LONG).show();
 
         recyclerView = findViewById(R.id.recycler_view);
         layoutManager = new LinearLayoutManager(this);
@@ -42,11 +51,24 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
         {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    // Display activities user is interested in
+    /* When user clicks on the calendar it will
+       to bring them to DisplayActivity.java
+       where their favourited activities will
+       be listed. They can also create their own activity here,
+       delete from their list, or delete any activities they have
+       created */
+    public void goToDisplay(View v)
+    {
+        Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+        startActivity(intent);
     }
 }

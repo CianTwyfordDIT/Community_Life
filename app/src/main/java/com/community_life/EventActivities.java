@@ -1,5 +1,6 @@
 package com.community_life;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import com.community_life.adapters.EventRecyclerAdapter;
+import com.community_life.db_activities.DisplayActivity;
+import com.community_life.db_activities.InsertActivity;
 
 public class EventActivities extends AppCompatActivity
 {

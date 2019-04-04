@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EventActivities"/>
+        <activity android:name=".EventActivities" />
+        <activity android:name=".db_activities.InsertActivity" />
+        <activity android:name=".db_activities.DisplayActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "265861324338",
+    "firebase_url": "https://communitylife-de285.firebaseio.com",
+    "project_id": "communitylife-de285",
+    "storage_bucket": "communitylife-de285.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265861324338:android:f7cbc9af0150a069",
+        "android_client_info": {
+          "package_name": "com.community_life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265861324338-m9cucgd6roniee3beagjr8boqt9djqph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.community_life",
+            "certificate_hash": "4b3e77e45a884ea47b46f697752943c9ba061f4a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLIozxBgZJ4KwMy3qFCIlnso5RRV6kKNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265861324338-85n3cprmtpblt77jppj7gr8cvo9bivmp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

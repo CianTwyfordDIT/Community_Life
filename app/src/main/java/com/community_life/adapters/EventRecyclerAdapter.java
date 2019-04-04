@@ -1,4 +1,4 @@
-package com.community_life;
+package com.community_life.adapters;
 
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.community_life.R;
 import pl.droidsonroids.gif.GifImageView;
 
 public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdapter.ViewHolder>
