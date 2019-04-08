@@ -15,13 +15,14 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <pl.droidsonroids.gif.GifImageView
+        <ImageView
             android:id="@+id/category_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="200dp"
+            android:src="@drawable/sports"/>
 
         <TextView
-            android:id="@+id/c_item_title"
+            android:id="@+id/category_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/category"
