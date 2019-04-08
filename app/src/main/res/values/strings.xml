@@ -8,6 +8,7 @@
     <string name="description">Description</string>
     <string name="time">Time</string>
     <string name="date">Date</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
     <string name="add_an_activity">Add an Activity</string>
     <string name="add_activity">Add activity</string>
 

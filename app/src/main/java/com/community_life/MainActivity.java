@@ -14,9 +14,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.community_life.db_activities.DisplayActivity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends ListActivity
 {
     // Name of categories will not change, so they can be kept in this array
@@ -49,7 +46,7 @@ public class MainActivity extends ListActivity
 
     public class MyAdapter extends ArrayAdapter
     {
-        public MyAdapter(Context context, int textViewResourceId, String[] objects)
+        private MyAdapter(Context context, int textViewResourceId, String[] objects)
         {
             // values passed in constructor go into the superclass
             super(context, textViewResourceId, objects);

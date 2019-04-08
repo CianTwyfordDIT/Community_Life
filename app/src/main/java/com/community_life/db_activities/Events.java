@@ -8,7 +8,8 @@ public class Events
     private String name;
     private String description;
     private Time time;
-    private Date date;
+    private String date;
+    private String category_spinner;
 
     public Events()
     {
@@ -43,13 +44,21 @@ public class Events
         this.time = time;
     }
 
-    public Date getDate()
+    public String getDate()
     {
         return date;
     }
 
-    public void setDate(Date date)
+    public void setDate(String date)
     {
         this.date = date;
+    }
+
+    public String getCategory_spinner() {
+        return category_spinner;
+    }
+
+    public void setCategory_spinner(String category_spinner) {
+        this.category_spinner = category_spinner;
     }
 }

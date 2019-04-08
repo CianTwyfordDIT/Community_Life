@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".db_activities.InsertActivity" />
         <activity android:name=".db_activities.DisplayActivity" />
-        <activity android:name=".EventActivities"></activity>
+        <activity android:name=".EventActivities" />
+        <activity android:name=".db_activities.CalendarActivity"></activity>
     </application>
 
 </manifest>
