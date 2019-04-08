@@ -37,7 +37,7 @@
             android:layout_height="250dp"
             android:textOn=""
             android:textOff=""
-            android:background="@drawable/favourited_not"
+            android:background="@drawable/selector"
             android:onClick="onCustomToggleClick"/>
 
     </LinearLayout>
