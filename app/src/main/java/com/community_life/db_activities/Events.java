@@ -7,20 +7,31 @@ public class Events
 {
     private String name;
     private String description;
-    private Time time;
+    private String time;
     private String date;
     private String category_spinner;
+    private String eventImage;
+
+    public String getEventImage() {
+        return eventImage;
+    }
+
+    public void setEventImage(String eventImage) {
+        this.eventImage = eventImage;
+    }
 
     public Events()
     {
 
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
@@ -34,12 +45,12 @@ public class Events
         this.description = description;
     }
 
-    public Time getTime()
+    public String getTime()
     {
         return time;
     }
 
-    public void setTime(Time time)
+    public void setTime(String time)
     {
         this.time = time;
     }

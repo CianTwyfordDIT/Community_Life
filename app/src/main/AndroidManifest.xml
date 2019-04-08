@@ -3,6 +3,7 @@
     package="com.community_life">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,8 @@
         <activity android:name=".db_activities.InsertActivity" />
         <activity android:name=".db_activities.DisplayActivity" />
         <activity android:name=".EventActivities" />
-        <activity android:name=".db_activities.CalendarActivity"></activity>
+        <activity android:name=".db_activities.CalendarActivity" />
+        <activity android:name=".db_activities.TimeActivity"></activity>
     </application>
 
 </manifest>
