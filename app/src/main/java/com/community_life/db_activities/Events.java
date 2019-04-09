@@ -10,15 +10,15 @@ public class Events
     private String time;
     private String date;
     private String category_spinner;
-    private String eventImage;
+   // private String eventImage;
 
-    public String getEventImage() {
-        return eventImage;
-    }
+   // public String getEventImage() {
+   //     return eventImage;
+   // }
 
-    public void setEventImage(String eventImage) {
-        this.eventImage = eventImage;
-    }
+    //public void setEventImage(String eventImage) {
+  //      this.eventImage = eventImage;
+  //  }
 
     public Events()
     {

@@ -129,7 +129,7 @@ public class InsertActivity extends AppCompatActivity
         btnUpload = findViewById(R.id.btnUpload);
         btnChoose = findViewById(R.id.btnChoose);
         imageView = findViewById(R.id.pictureImage);
-        btnChoose.setOnClickListener(new View.OnClickListener()
+       /* btnChoose.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -137,7 +137,7 @@ public class InsertActivity extends AppCompatActivity
                 // chooseImage();
                 encodedImage = encodeToBase64(bitmap, Bitmap.CompressFormat.JPEG, 100);
             }
-        });
+        }); */
        /*
        btnUpload.setOnClickListener(new View.OnClickListener()
         {
@@ -192,7 +192,7 @@ public class InsertActivity extends AppCompatActivity
                 events.setDate(finalDate);
 
                 //IMAGE
-                events.setEventImage(encodedImage.trim());
+                //events.setEventImage(encodedImage.trim());
 
                 // CATEGORY
                 String catDesc = String.valueOf(spinner.getSelectedItem());
@@ -277,12 +277,12 @@ public class InsertActivity extends AppCompatActivity
         }
     // End of chooseImage() functionality */
 
-    public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat, int quality)
+  /*  public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat, int quality)
     {
         ByteArrayOutputStream byteArrayOS = new ByteArrayOutputStream();
         image.compress(compressFormat, quality, byteArrayOS);
         return Base64.encodeToString(byteArrayOS.toByteArray(), Base64.DEFAULT);
-    }
+    }*/
 
     // Go back to DisplayActivity.java
     public void goToBackToDisplayActivity(View v)
