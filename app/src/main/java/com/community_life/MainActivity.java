@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.community_life.SQLLite_DB.Community_Life_Local;
 import com.community_life.db_activities.DisplayActivity;
 
 public class MainActivity extends ListActivity
@@ -19,6 +21,7 @@ public class MainActivity extends ListActivity
     // Name of categories will not change, so they can be kept in this array
     String[] categories = {"Sports", "Music", "Arts & Crafts", "Computers", "Food",
             "Learning", "Outdoors"};
+    public Community_Life_Local db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,6 +30,9 @@ public class MainActivity extends ListActivity
         setContentView(R.layout.activity_main);
         // Passing the view you are in  activity_main
         setListAdapter(new MyAdapter(this, R.layout.category_layout, categories));
+        db = new Community_Life_Local(this);
+        db.open();
+        db.close();
     }
 
     // Click on a category

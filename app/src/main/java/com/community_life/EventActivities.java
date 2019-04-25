@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.community_life.SQLLite_DB.Community_Life_Local;
+
 public class EventActivities extends AppCompatActivity
 {
     ToggleButton toggleButton;
+    public Community_Life_Local db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -18,6 +21,9 @@ public class EventActivities extends AppCompatActivity
         setContentView(R.layout.event_layout);
         Intent intent = getIntent();
         intent.getStringExtra("c");
+        db = new Community_Life_Local(this);
+        db.open();
+        db.close();
     }
 
     public void onCustomToggleClick(View view)
@@ -26,6 +32,7 @@ public class EventActivities extends AppCompatActivity
 
         if(((ToggleButton)view).isChecked())
         {
+            //db.insertFaveEvent();
             Toast.makeText(this, "Added To Favourites", Toast.LENGTH_SHORT).show();
         }
         else

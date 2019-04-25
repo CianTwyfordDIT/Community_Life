@@ -23,7 +23,8 @@
         <activity android:name=".db_activities.DisplayActivity" />
         <activity android:name=".EventActivities" />
         <activity android:name=".db_activities.CalendarActivity" />
-        <activity android:name=".db_activities.TimeActivity"></activity>
+        <activity android:name=".db_activities.TimeActivity"/>
+        <activity android:name=".SQLLite_DB.Community_Life_Local"/>
     </application>
 
 </manifest>
